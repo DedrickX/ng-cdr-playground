@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StatefulComponentsExampleComponent } from './stateful-components-example/stateful-components-example.component';
+import { ContainerComponentsExampleComponent } from './container-components/container-components-example.component';
+import { ContainerFirstComponent } from './container-components/container-first/container-first.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { StatefulFirstComponent } from './stateful-components-example/stateful-first/stateful-first.component';
+import { IntroComponent } from './intro/intro.component';
 
 const components = [
   NotFoundComponent,
-  StatefulComponentsExampleComponent,
-  StatefulFirstComponent,
+  IntroComponent,
+  ContainerComponentsExampleComponent,
+  ContainerFirstComponent,
 ]
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
   ],
   imports: [
     CommonModule

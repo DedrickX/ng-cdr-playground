@@ -1,0 +1,8 @@
+<div class="logger-header">
+  <h2>Logger</h2>
+  <button (click)="onClear()">Clear</button>
+</div>
+
+<div class="logger-text"
+     [innerText]="log$ | async">
+</div>
