@@ -1,0 +1,10 @@
+@mixin round-border($border-color) {
+  border: 2px solid $border-color;
+  border-radius: 10px;
+}
+
+@mixin example-component {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
