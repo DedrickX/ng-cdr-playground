@@ -1,4 +1,4 @@
-@import "/src/mixins";
+@import "/src/tools";
 
 :host {
   display: block;
@@ -11,11 +11,12 @@ a.link {
   margin-bottom: 6px;
   text-decoration: none;
   color: black;
-  background-color: lightskyblue;
-  @include round-border(lightskyblue)
+  background-color: map-get($palette, "blue");
+  @include round-border(darken(map-get($palette, "blue"), 5%))
 }
 
 a.link-active {
-  @include round-border(blue)
+  background-color: map-get($palette, "orange");
+  @include round-border(map-get($palette, "orange-border"))
 }
 

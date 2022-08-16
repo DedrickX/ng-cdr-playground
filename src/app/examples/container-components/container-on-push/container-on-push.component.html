@@ -1,0 +1,24 @@
+<h3>app-container-on-push</h3>
+
+<div class="state">
+  <div>name: "{{ state.name }}"</div>
+  <div>surname: "{{ state.surname }}"</div>
+  <div>age: {{ state.age }}</div>
+</div>
+
+<div class="state-change">
+  <div>Zmena stavu user akciou</div>
+  <div class="horizontal">
+    <div class="label">Okamžite</div>
+    <button (click)="setState(0)">Person A</button>
+    <button (click)="setState(1)">Person B</button>
+    <button (click)="setState(2)">Person C</button>
+  </div>
+  <div class="horizontal">
+    <div class="label">Oneskorene</div>
+    <button (click)="setStateDelayed(0)">Person A</button>
+    <button (click)="setStateDelayed(1)">Person B</button>
+    <button (click)="setStateDelayed(2)">Person C</button>
+  </div>
+</div>
+

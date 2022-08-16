@@ -1,0 +1,27 @@
+<h2>Container komponenty</h2>
+<h3>
+  /app/examples/container-components
+</h3>
+<p>
+  Máme komponent ktorého state je reprezentovaný ako interface <strong>Person</strong>. Vo výsledku je to objekt ktorý
+  má hodnoty name, surname a age.
+</p>
+<p>
+Tento komponet má inštanciu state uloženú v premennej <strong>state</strong>. Tento state je renderovaný do textovej
+  podoby vo svetlom vnútre komponentu cez interpolation binding.
+</p>
+<p>
+  Pomocou tlačidiel môžeme meniť state komponentu a sledovať, či sa vnútorná zmena state prejaví aj v zobrazených
+  údajoch.<br>
+  Tlačidlá pre oneskorenú zmenu majú v sebe obyčajný setTimeout s 500ms, ale vo svojej podstate je to to isté, ako keby
+  prišla nová hodnota stavu cez nejaký async call.
+</p>
+
+<app-container-default></app-container-default>
+
+<p>
+  Všetko funguje ako má, aj oneskorená zmena stavu sa prejaví. Tento prvý komponent má nastavenú <strong>Change
+  detection strategy</strong> na <strong>Default</strong> hodnotu.
+</p>
+
+<app-container-on-push></app-container-on-push>

@@ -1,0 +1,10 @@
+@import "/src/tools";
+
+:host {
+  @include example-component(map-get($palette, "blue"));
+  @include round-border(map-get($palette, "blue-border"))
+}
+
+.label {
+  width: 100px;
+}

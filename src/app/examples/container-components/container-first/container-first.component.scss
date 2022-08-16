@@ -1,6 +1,0 @@
-@import "/src/mixins";
-
-:host {
-  @include example-component;
-  @include round-border(green)
-}

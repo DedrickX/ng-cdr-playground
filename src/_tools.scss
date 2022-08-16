@@ -1,0 +1,22 @@
+$palette: (
+  "blue-border": steelblue,
+  "blue": lightblue,
+  "orange-border": saddlebrown,
+  "orange": sandybrown,
+  "grey": lightgrey
+);
+
+@mixin round-border($border-color) {
+  border: 2px solid $border-color;
+  border-radius: 10px;
+}
+
+@mixin example-component($fill-color) {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  background-color: $fill-color;
+}
+
+
