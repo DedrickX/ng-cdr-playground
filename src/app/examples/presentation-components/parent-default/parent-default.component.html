@@ -1,10 +1,4 @@
-<h3>app-container-default</h3>
-
-<div class="state">
-  <div>name: "{{ state.name }}"</div>
-  <div>surname: "{{ state.surname }}"</div>
-  <div>age: {{ state.age }}</div>
-</div>
+<h3>app-parent-default</h3>
 
 <div class="state-change">
   <div>Zmena stavu user akciou</div>
@@ -13,11 +7,18 @@
     <button (click)="setState(0)">Person A</button>
     <button (click)="setState(1)">Person B</button>
     <button (click)="setState(2)">Person C</button>
+    <button (click)="mutateAge()">Mutate age</button>
   </div>
   <div class="horizontal">
     <div>Oneskorene</div>
     <button (click)="setStateDelayed(0)">Person A</button>
     <button (click)="setStateDelayed(1)">Person B</button>
     <button (click)="setStateDelayed(2)">Person C</button>
+    <button (click)="mutateAgeDelayed()">Mutate age</button>
   </div>
+</div>
+
+<div class="side-by-side">
+  <app-child-default [state]="state"></app-child-default>
+  <app-child-on-push [state]="state"></app-child-on-push>
 </div>

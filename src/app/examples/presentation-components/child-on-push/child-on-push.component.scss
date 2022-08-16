@@ -2,5 +2,6 @@
 
 :host {
   @include example-component(map-get($palette, "orange"));
-  @include round-border(map-get($palette, "orange-border"))
+  @include round-border(map-get($palette, "orange-border"));
+  margin-top: 12px;
 }

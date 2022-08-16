@@ -25,3 +25,11 @@ const persons: Person[] = [
 export function createPerson(index: number): Person {
   return { ...persons[index] };
 }
+
+export function getEmptyPerson(): Person {
+  return {
+    name: '',
+    surname: '',
+    age: 0
+  }
+}

@@ -16,9 +16,7 @@ import { ContainerOnPushComponent } from './container-on-push/container-on-push.
     CommonModule
   ],
   exports: [
-    ContainerComponentsExampleComponent,
-    ContainerDefaultComponent,
-    ContainerOnPushComponent
+    ContainerComponentsExampleComponent
   ]
 })
 export class ContainerComponentsModule { }

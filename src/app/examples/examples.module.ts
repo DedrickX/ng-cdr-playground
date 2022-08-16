@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContainerComponentsModule } from './container-components/container-components.module';
 import { IntroModule } from './intro/intro.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PresentationComponentsModule } from './presentation-components/presentation-components.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent,
     IntroModule,
     ContainerComponentsModule,
+    PresentationComponentsModule,
   ]
 })
 export class ExamplesModule { }

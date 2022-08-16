@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { merge, Observable, scan, Subject } from 'rxjs';
 import { LoggerService } from './logger.service';
 
@@ -7,7 +7,7 @@ import { LoggerService } from './logger.service';
   templateUrl: './logger.component.html',
   styleUrls: ['./logger.component.scss']
 })
-export class LoggerComponent implements OnInit {
+export class LoggerComponent {
 
   log$: Observable<string>;
 
@@ -27,9 +27,6 @@ export class LoggerComponent implements OnInit {
         return ''
       }, '')
     );
-  }
-
-  ngOnInit(): void {
   }
 
   onClear() {

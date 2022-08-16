@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { createPerson, Person } from '../../../models/models';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { createPerson, getEmptyPerson, Person } from '../../../models/models';
 
 @Component({
   selector: 'app-container-default',
@@ -7,18 +7,11 @@ import { createPerson, Person } from '../../../models/models';
   styleUrls: ['./container-default.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class ContainerDefaultComponent implements OnInit {
+export class ContainerDefaultComponent {
 
-  state: Person = {
-    name: '',
-    surname: '',
-    age: 0
-  };
+  state: Person = getEmptyPerson();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   setState(index: number) {
     this.state = createPerson(index)

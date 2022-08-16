@@ -16,12 +16,18 @@ Tento komponet má inštanciu state uloženú v premennej <strong>state</strong>
   Tlačidlá pre oneskorenú zmenu majú v sebe obyčajný setTimeout s 500ms, ale vo svojej podstate je to to isté, ako keby
   prišla nová hodnota stavu cez nejaký async call.
 </p>
+<p>
+  Tento prvý komponent má nastavenú <strong>Change Detection Strategy</strong> na <strong>Default</strong> hodnotu...
+</p>
 
 <app-container-default></app-container-default>
 
 <p>
-  Všetko funguje ako má, aj oneskorená zmena stavu sa prejaví. Tento prvý komponent má nastavenú <strong>Change
-  detection strategy</strong> na <strong>Default</strong> hodnotu.
+  Všetko funguje ako má, aj oneskorená zmena stavu sa prejaví.
 </p>
 
+<p>
+  Teraz sa ale pozrime, ako sa v takomto istom scenári zachová komponent s <strong>Change Detection Strategy</strong>
+  nastavenou na <strong>On Push</strong>...
+</p>
 <app-container-on-push></app-container-on-push>
