@@ -1,12 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { createPerson, getEmptyPerson, Person } from '../../../models/models';
+import { INTRO_CHANGE_DETECTION_STRATEGY } from '../intro.module';
 import { ScanCounterService } from '../scan-counter.service';
 
 @Component({
   selector: 'app-intro-parent',
   templateUrl: './intro-parent.component.html',
   styleUrls: ['./intro-parent.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: INTRO_CHANGE_DETECTION_STRATEGY
 })
 export class IntroParentComponent {
 

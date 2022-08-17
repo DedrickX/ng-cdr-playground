@@ -1,13 +1,14 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { take, timer } from 'rxjs';
 import { createPerson, getEmptyPerson, Person } from '../../../models/models';
+import { INTRO_CHANGE_DETECTION_STRATEGY } from '../intro.module';
 import { ScanCounterService } from '../scan-counter.service';
 
 @Component({
   selector: 'app-intro-child-second',
   templateUrl: './intro-child-second.component.html',
   styleUrls: ['./intro-child-second.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: INTRO_CHANGE_DETECTION_STRATEGY
 })
 export class IntroChildSecondComponent {
 

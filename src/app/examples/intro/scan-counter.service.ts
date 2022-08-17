@@ -7,7 +7,6 @@ export class ScanCounterService {
   countSum$: Observable<CounterState>
 
   private countSubject = new BehaviorSubject<CountedNames | null>(null);
-
   private ignoreValues = true;
 
   constructor(
