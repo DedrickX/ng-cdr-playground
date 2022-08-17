@@ -1,0 +1,11 @@
+<div class="counter-header">
+  <h3>Počítadlo UI getterov</h3>
+  <button (click)="reset()">Reset</button>
+</div>
+
+<div class="mb components" *ngIf="countSum$ | async as vm">
+  <div>Parent:  <span>{{ vm.parent }}</span></div>
+  <div>Child 1:  <span>{{ vm.child }}</span></div>
+  <div>Child 2:  <span>{{ vm.child2 }}</span></div>
+  <div>GrandChild:  <span>{{ vm.grandChild }}</span></div>
+</div>

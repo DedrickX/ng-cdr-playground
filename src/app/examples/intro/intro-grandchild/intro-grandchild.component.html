@@ -1,0 +1,14 @@
+<h3>GrandChild</h3>
+
+<div class="state">
+  <div>age: {{ ageValue }}</div>
+</div>
+
+<div class="state-change">
+  <div>Stav sa drží iba tu, zmena sa nekomunikuje hore</div>
+  <div class="horizontal">
+    <div>Zmeň vek</div>
+    <button (click)="modifyAge(-1)">Odober</button>
+    <button (click)="modifyAge(1)">Pridaj</button>
+  </div>
+</div>

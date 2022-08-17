@@ -1,0 +1,35 @@
+@import "/src/tools";
+
+:host {
+  @include example-component(map-get($palette, "grey"));
+  @include round-border(map-get($palette, "grey-border"))
+}
+
+.counter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.components {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  & > * {
+    text-align: center;
+    padding: 10px;
+    margin: 6px;
+    @include round-border(map-get($palette, "grey-border"));
+
+    &:nth-child(1) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  span {
+    color: map-get($palette, "orange-border");
+    font-weight: bold;
+  }
+}
+

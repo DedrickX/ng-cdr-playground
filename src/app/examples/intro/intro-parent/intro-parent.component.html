@@ -1,0 +1,22 @@
+<h3>Parent</h3>
+
+<div class="state">
+  <div>name: "{{ state.name }}"</div>
+  <div>surname: "{{ state.surname }}"</div>
+  <div>age: {{ age }}</div>
+</div>
+
+<div class="state-change mb">
+  <div>Zmena stavu user akciou</div>
+  <div class="horizontal">
+    <div>Nastav usera</div>
+    <button (click)="setState(0)">Person A</button>
+    <button (click)="setState(1)">Person B</button>
+    <button (click)="setState(2)">Person C</button>
+  </div>
+</div>
+
+<div class="side-by-side">
+  <app-intro-child [(state)]="state"></app-intro-child>
+  <app-intro-child-second [(state)]="state"></app-intro-child-second>
+</div>

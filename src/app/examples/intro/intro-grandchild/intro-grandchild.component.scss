@@ -1,0 +1,6 @@
+@import "/src/tools";
+
+:host {
+  @include example-component(darken(map-get($palette, "blue"), 20%));
+  @include round-border(map-get($palette, "blue-border"))
+}

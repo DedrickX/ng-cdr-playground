@@ -1,0 +1,19 @@
+<h3>Child 1</h3>
+
+<div class="state">
+  <div>name: "{{ stateValue.name }}"</div>
+  <div>surname: "{{ stateValue.surname }}"</div>
+  <div>age: {{ age }}</div>
+</div>
+
+<div class="state-change mb">
+  <div>Zmena stavu user akciou</div>
+  <div class="horizontal">
+    <div>Nastav usera</div>
+    <button (click)="setState(0)">Person A</button>
+    <button (click)="setState(1)">Person B</button>
+    <button (click)="setState(2)">Person C</button>
+  </div>
+</div>
+
+<app-intro-grandchild [age]="stateValue.age"></app-intro-grandchild>
