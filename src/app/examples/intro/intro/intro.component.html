@@ -1,6 +1,44 @@
 <h2>Intro</h2>
-<h3>Ako funguje change detector?</h3>
+<h3>Ako funguje change detector v hierarchii</h3>
+<p>
+  Tu je ukážková hierarchia komponentov, ktoré editujú entitu <strong>Partner</strong>.
+  Zmena partnera v ktoromkoľvek z komponentov je cez binding odoslaná k ostatným.<br>
+  Jedine <strong>GrandChild</strong> komponent jednosmerne dostáva číselnú hodnotu age a mení ju iba u seba -
+  o tejto zmene sa nikto iný nedozvie.
+</p>
+<p>
+  Šedý komponent s nadpisom <strong>Volania getterov z UI</strong> zobrazuje koľko krát sa v ukážkovej hierarchii
+  overovala hodnota property v HTML v bindingu. Vďaka tomu orientačne vidíme, ako často prebehla change detection a
+  potencionálne aj prerendenrovanie daného komponentu.
+</p>
+<p>
+  Poklikaj na tlačídlá meniace stav v jednotlivých komponentoch a sleduj číselká dole.
+</p>
+<p>
+  V súbore <strong>src/app/examples/intro/intro.module.ts</strong> je konštanta
+  <strong>INTRO_CHANGE_DETECTION_STRATEGY</strong> cez ktorú môžeš zmeniť <strong>ChangeDetectionStrategy</strong>
+  celej tejto ukážkovej hierarchie komponentov.<br>
+  Porovnaj správanie Default a OnPush.
+</p>
 
 <app-intro-parent></app-intro-parent>
 
 <app-scan-counter></app-scan-counter>
+
+<h3>Stojí za povšimnutie</h3>
+<ul>
+  <li>
+    Pri OnPush čísla volaní getterov pribúdajú vždy o 1, pri Default o 2. Ak ale spustíte appku ako production,
+    aj pri Default budú čísla rásť iba o 1.
+  </li>
+  <li>
+    Ak v GrandChild komponente meníme jeho vnútornú hodnotu vek, pri OnPush rastú iba čísla Parent, Child 1,
+    GrandChild. Ale pri Default rastú všetky.
+  </li>
+  <li>
+    Ak spustíme v Child 2 komponente akciu "Počítaj len tak do konzoly" je v správaní OnPush vs Default veľký rozdiel.
+    <br>
+    Pri Default rastú čísla volaní getterov pre všetky komponenty a pri každom jednom tiku v konzole.<br>
+    Pri OnPush stúpne iba číslo Parent a Child 2 iba raz.
+  </li>
+</ul>

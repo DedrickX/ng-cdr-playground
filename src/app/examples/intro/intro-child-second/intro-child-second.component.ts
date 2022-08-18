@@ -39,7 +39,7 @@ export class IntroChildSecondComponent {
   doAsyncThings() {
     timer(500, 500).pipe(
       take(5)
-    ).subscribe((value) => console.log('value', value))
+    ).subscribe((value) => console.log('Len tak počítam do 5:', value + 1))
   }
 
 }

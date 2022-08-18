@@ -19,8 +19,9 @@ export class IntroParentComponent {
   }
 
   constructor(
-    private counter: ScanCounterService
-  ) { }
+    private counter: ScanCounterService,
+  ) {
+  }
 
   setState(index: number) {
     this.state = createPerson(index)
