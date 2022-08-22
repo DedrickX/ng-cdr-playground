@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { createPerson, getEmptyPerson, Person } from '../../../models/models';
-import { INTRO_CHANGE_DETECTION_STRATEGY } from '../intro.module';
+import { HIERARCHY_CHANGE_DETECTION_STRATEGY } from '../hierarchy.module';
 import { ScanCounterService } from '../scan-counter.service';
 
 @Component({
   selector: 'app-intro-child',
-  templateUrl: './intro-child.component.html',
-  styleUrls: ['./intro-child.component.scss'],
-  changeDetection: INTRO_CHANGE_DETECTION_STRATEGY
+  templateUrl: './hierarchy-child.component.html',
+  styleUrls: ['./hierarchy-child.component.scss'],
+  changeDetection: HIERARCHY_CHANGE_DETECTION_STRATEGY
 })
-export class IntroChildComponent {
+export class HierarchyChildComponent {
 
   @Input()
   set state(value: Person) {

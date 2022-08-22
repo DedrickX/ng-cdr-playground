@@ -6,5 +6,25 @@
   Prezentačné komponenty sú také, ktoré dostávajú informácie pre zobrazenie z nadradených komponentov (kontajner
   komponentov).
 </p>
+<p>
+  State je držaný v hlavnom kontajner komponente parent a potom posielaný cez binding do dvoch prezentačných
+  child komponentov.
+</p>
+<p>
+  Ľavý komponent má <strong>Change Detection Strategy</strong> nastavenú na <strong>Default</strong> hodnotu, pravý
+  komponent má <strong>Change Detection Strategy</strong> nastavenú na <strong>OnPush</strong> hodnotu:
+</p>
 
 <app-parent-default></app-parent-default>
+
+<h3>Stojí za povšimnutie</h3>
+<ul class="instructive">
+  <li>
+    Zmeny Person entít v parentovi fungujú dobre v oboch prezentačných komponentoch, bez ohľadu na to či sú uskutočnené
+    okamžite alebo oneskorene. Dokonca funguje aj oneskorená zmena s OnPush, ktorá v pri kontajner príklade nefungovala.
+  </li>
+  <li>
+    Mutácia bindovanej hodnoty v parentovi (zmena hodnoty age) ale spôsobí chybu pre OnPush child prezentačný
+    komponent - neaktualizuje sa.
+  </li>
+</ul>

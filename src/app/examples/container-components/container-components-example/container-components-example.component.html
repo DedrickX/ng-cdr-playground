@@ -1,33 +1,27 @@
 <h2>Container komponenty</h2>
+
 <h3>
   /app/examples/container-components
 </h3>
 <p>
-  Máme komponent ktorého state je reprezentovaný ako interface <strong>Person</strong>. Vo výsledku je to objekt ktorý
-  má hodnoty name, surname a age.
-</p>
-<p>
-Tento komponet má inštanciu state uloženú v premennej <strong>state</strong>. Tento state je renderovaný do textovej
-  podoby vo svetlom vnútre komponentu cez interpolation binding.
-</p>
-<p>
-  Pomocou tlačidiel môžeme meniť state komponentu a sledovať, či sa vnútorná zmena state prejaví aj v zobrazených
-  údajoch.<br>
-  Tlačidlá pre oneskorenú zmenu majú v sebe obyčajný setTimeout s 500ms, ale vo svojej podstate je to to isté, ako keby
-  prišla nová hodnota stavu cez nejaký async call.
-</p>
-<p>
-  Tento prvý komponent má nastavenú <strong>Change Detection Strategy</strong> na <strong>Default</strong> hodnotu...
+  Prvý komponent má nastavenú <strong>Change Detection Strategy</strong> na <strong>Default</strong> hodnotu:
 </p>
 
 <app-container-default></app-container-default>
 
 <p>
-  Všetko funguje ako má, aj oneskorená zmena stavu sa prejaví.
+  Druhý komponent má nastavenú <strong>Change Detection Strategy</strong> na <strong>OnPush</strong> hodnotu:
 </p>
 
-<p>
-  Teraz sa ale pozrime, ako sa v takomto istom scenári zachová komponent s <strong>Change Detection Strategy</strong>
-  nastavenou na <strong>On Push</strong>...
-</p>
 <app-container-on-push></app-container-on-push>
+
+<h3>Stojí za povšimnutie</h3>
+<ul class="instructive">
+  <li>
+    Komponent s Default strategy funguje ako má, bez ohľadu na to či zmeníme hodnotu okamžite alebo oneskorene.
+  </li>
+  <li>
+    Pri komponente s OnPush strategy sú okamžité zmeny hodnôt bez problémov. No oneskorená zmena hodnôt sa správa
+    zle...
+  </li>
+</ul>

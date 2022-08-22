@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   ContainerComponentsExampleComponent
 } from './examples/container-components/container-components-example/container-components-example.component';
+import { HierarchyComponent } from './examples/hierarchy/hierarchy/hierarchy.component';
 import { IntroComponent } from './examples/intro/intro/intro.component';
 import { NotFoundComponent } from './examples/not-found/not-found.component';
 import {
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'intro', component: IntroComponent },
   { path: 'container', component: ContainerComponentsExampleComponent },
   { path: 'presentation', component: PresentationComponentExampleComponent },
+  { path: 'hierarchy', component: HierarchyComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

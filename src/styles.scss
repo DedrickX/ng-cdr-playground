@@ -18,8 +18,13 @@ h2, h3, h4 {
   margin-top: 0;
 }
 
-li {
-  margin-bottom: 6px;
+ul.instructive {
+  list-style-type: square;
+  li {
+    margin-bottom: 6px;
+    color: map-get($palette, "orange-border");
+    font-weight: bold;
+  }
 }
 
 button {

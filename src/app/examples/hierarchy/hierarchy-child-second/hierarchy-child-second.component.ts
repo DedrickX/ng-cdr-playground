@@ -1,16 +1,16 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { take, timer } from 'rxjs';
 import { createPerson, getEmptyPerson, Person } from '../../../models/models';
-import { INTRO_CHANGE_DETECTION_STRATEGY } from '../intro.module';
+import { HIERARCHY_CHANGE_DETECTION_STRATEGY } from '../hierarchy.module';
 import { ScanCounterService } from '../scan-counter.service';
 
 @Component({
   selector: 'app-intro-child-second',
-  templateUrl: './intro-child-second.component.html',
-  styleUrls: ['./intro-child-second.component.scss'],
-  changeDetection: INTRO_CHANGE_DETECTION_STRATEGY
+  templateUrl: './hierarchy-child-second.component.html',
+  styleUrls: ['./hierarchy-child-second.component.scss'],
+  changeDetection: HIERARCHY_CHANGE_DETECTION_STRATEGY
 })
-export class IntroChildSecondComponent {
+export class HierarchyChildSecondComponent {
 
   @Input()
   set state(value: Person) {
