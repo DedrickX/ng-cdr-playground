@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   ContainerComponentsExampleComponent
 } from './examples/container-components/container-components-example/container-components-example.component';
+import {
+  CvaHierarchyExampleComponent
+} from './examples/cva-hierarchy/cva-hierarchy-example/cva-hierarchy-example.component';
 import { HierarchyComponent } from './examples/hierarchy/hierarchy/hierarchy.component';
 import { IntroComponent } from './examples/intro/intro/intro.component';
 import { NotFoundComponent } from './examples/not-found/not-found.component';
@@ -16,6 +19,7 @@ const routes: Routes = [
   { path: 'container', component: ContainerComponentsExampleComponent },
   { path: 'presentation', component: PresentationComponentExampleComponent },
   { path: 'hierarchy', component: HierarchyComponent },
+  { path: 'cva-hierarchy', component: CvaHierarchyExampleComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
