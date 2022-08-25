@@ -4,6 +4,11 @@
   /app/examples/container-components
 </h3>
 <p>
+  Kontajner komponenty sú také, ktoré hodnoty pre zobrazenie nedostávajú z nadradeného komponentu cez inputy/CVA
+  binding, ale si tieto hodnoty zaobstarajú svojou vlastnou iniciatívou - napr. načítaním z API, z local storage,
+  výpočtami na základe užívateľovho vstupu a pod.
+</p>
+<p>
   Prvý komponent má nastavenú <strong>Change Detection Strategy</strong> na <strong>Default</strong> hodnotu:
 </p>
 
@@ -15,13 +20,15 @@
 
 <app-container-on-push></app-container-on-push>
 
-<h3>Stojí za povšimnutie</h3>
-<ul class="instructive">
-  <li>
-    Komponent s Default strategy funguje ako má, bez ohľadu na to či zmeníme hodnotu okamžite alebo oneskorene.
-  </li>
-  <li>
-    Pri komponente s OnPush strategy sú okamžité zmeny hodnôt bez problémov. No oneskorená zmena hodnôt sa správa
-    zle...
-  </li>
-</ul>
+<div class="instructive">
+  <h3>Stojí za povšimnutie</h3>
+  <ul>
+    <li>
+      Komponent s Default strategy funguje ako má, bez ohľadu na to či zmeníme hodnotu okamžite alebo oneskorene.
+    </li>
+    <li>
+      Pri komponente s OnPush strategy sú okamžité zmeny hodnôt bez problémov. No oneskorená zmena hodnôt sa správa
+      zle...
+    </li>
+  </ul>
+</div>

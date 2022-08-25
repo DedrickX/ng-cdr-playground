@@ -23,23 +23,25 @@
 
 <app-scan-counter></app-scan-counter>
 
-<h3>Stojí za povšimnutie</h3>
-<ul class="instructive">
-  <li>
-    Pri OnPush čísla volaní getterov pribúdajú vždy o 1, pri Default o 2. Ak ale spustíte appku ako production,
-    aj pri Default budú čísla rásť iba o 1.
-  </li>
-  <li>
-    Ak v GrandChild komponente meníme jeho vnútornú hodnotu vek, pri OnPush rastú iba čísla Parent, Child 1,
-    GrandChild. Ale pri Default rastú všetky.
-  </li>
-  <li>
-    Ak pri OnPush opakovane nastavujeme napr. Person A, rastú čísla pre všetky komponenty okrem GrandChild...
-  </li>
-  <li>
-    Ak spustíme v Child 2 komponente akciu "Počítaj len tak do konzoly" je v správaní OnPush vs Default veľký rozdiel.
-    <br>
-    Pri Default rastú čísla volaní getterov pre všetky komponenty a pri každom jednom tiku v konzole.<br>
-    Pri OnPush stúpne iba číslo Parent a Child 2 iba raz.
-  </li>
+<div class="instructive">
+  <h3>Stojí za povšimnutie</h3>
+  <ul>
+    <li>
+      Pri OnPush čísla volaní getterov pribúdajú vždy o 1, pri Default o 2. Ak ale spustíte appku ako production,
+      aj pri Default budú čísla rásť iba o 1.
+    </li>
+    <li>
+      Ak v GrandChild komponente meníme jeho vnútornú hodnotu vek, pri OnPush rastú iba čísla Parent, Child 1,
+      GrandChild. Ale pri Default rastú všetky.
+    </li>
+    <li>
+      Ak pri OnPush opakovane nastavujeme napr. Person A, rastú čísla pre všetky komponenty okrem GrandChild...
+    </li>
+    <li>
+      Ak spustíme v Child 2 komponente akciu "Počítaj len tak do konzoly" je v správaní OnPush vs Default veľký rozdiel.
+      <br>
+      Pri Default rastú čísla volaní getterov pre všetky komponenty a pri každom jednom tiku v konzole.<br>
+      Pri OnPush stúpne iba číslo Parent a Child 2 iba raz.
+    </li>
 </ul>
+</div>

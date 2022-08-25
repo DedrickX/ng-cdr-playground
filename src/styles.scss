@@ -18,12 +18,22 @@ h2, h3, h4 {
   margin-top: 0;
 }
 
-ul.instructive {
-  list-style-type: square;
-  li {
-    margin-bottom: 6px;
-    color: map-get($palette, "orange-border");
-    font-weight: bold;
+.instructive {
+  background-image: linear-gradient(to bottom right, lightyellow, white);
+  padding: 12px;
+  border: 2px solid lightyellow;
+  border-radius: 10px;
+
+  h3::after {
+    content: " 🤔";
+  }
+
+  ul {
+    list-style-type: square;
+    li {
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
   }
 }
 
