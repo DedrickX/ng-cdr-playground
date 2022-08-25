@@ -3,7 +3,8 @@ $palette: (
   "blue": lightblue,
   "orange-border": saddlebrown,
   "orange": sandybrown,
-  "grey": lightgrey
+  "grey": lightgrey,
+  "yellow": lightyellow
 );
 
 @mixin round-border($border-color) {

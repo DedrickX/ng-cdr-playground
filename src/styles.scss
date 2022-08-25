@@ -19,9 +19,9 @@ h2, h3, h4 {
 }
 
 .instructive {
-  background: linear-gradient(-60deg, lightyellow, white, lightyellow);
+  background-color: map-get($palette, "yellow");
   padding: 12px;
-  border: 2px solid lightyellow;
+  border: 2px solid map-get($palette, "yellow");
   border-radius: 10px;
 
   h3::after {

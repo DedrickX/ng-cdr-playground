@@ -14,7 +14,7 @@ header {
   grid-row: 1;
   grid-column: 1 / 3;
   display: block;
-  background-color: map-get($palette, "blue");
+  background: linear-gradient(160deg, lighten(map-get($palette, "blue-border"), 10) 20%, white, map-get($palette, "blue"));
   border-radius: 10px;
   padding: 16px;
 }
