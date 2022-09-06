@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../../shared/shared.module';
 import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
@@ -7,7 +7,7 @@ import { IntroComponent } from './intro/intro.component';
     IntroComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ],
   exports: [
     IntroComponent,

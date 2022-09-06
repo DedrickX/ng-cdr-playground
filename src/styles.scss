@@ -23,6 +23,7 @@ h2, h3, h4 {
   padding: 12px;
   border: 2px solid map-get($palette, "yellow");
   border-radius: 10px;
+  margin-bottom: 10px;
 
   h3::after {
     content: " 🤔";

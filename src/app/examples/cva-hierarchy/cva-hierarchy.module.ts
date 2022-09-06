@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../../shared/shared.module';
 import { CvaHierarchyExampleComponent } from './cva-hierarchy-example/cva-hierarchy-example.component';
 
 @NgModule({
@@ -7,7 +7,7 @@ import { CvaHierarchyExampleComponent } from './cva-hierarchy-example/cva-hierar
     CvaHierarchyExampleComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ],
   exports: [
     CvaHierarchyExampleComponent
