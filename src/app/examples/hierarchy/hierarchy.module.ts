@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { SharedModule } from '../../shared/shared.module';
 import { HierarchyChildSecondComponent } from './hierarchy-child-second/hierarchy-child-second.component';
 import { HierarchyChildComponent } from './hierarchy-child/hierarchy-child.component';
 import { HierarchyGrandchildComponent } from './hierarchy-grandchild/hierarchy-grandchild.component';
@@ -20,7 +20,7 @@ export const HIERARCHY_CHANGE_DETECTION_STRATEGY: ChangeDetectionStrategy = Chan
     ScanCounterComponent,
   ],
   imports: [
-    CommonModule,
+    SharedModule
   ],
   exports: [
     HierarchyComponent

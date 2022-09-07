@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../../shared/shared.module';
 import { PresentationComponentExampleComponent } from './presentation-component-example/presentation-component-example.component';
 import { ParentDefaultComponent } from './parent-default/parent-default.component';
 import { ChildDefaultComponent } from './child-default/child-default.component';
@@ -13,7 +13,7 @@ import { ChildOnPushComponent } from './child-on-push/child-on-push.component';
     ChildOnPushComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ],
   exports: [
     PresentationComponentExampleComponent
