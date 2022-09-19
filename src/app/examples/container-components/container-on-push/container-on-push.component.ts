@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
+import { Subject } from 'rxjs';
 import { createPerson, getEmptyPerson, Person } from '../../../models/models';
 
 @Component({
@@ -8,10 +9,10 @@ import { createPerson, getEmptyPerson, Person } from '../../../models/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContainerOnPushComponent {
-
+  vm$ = new Subject<Person>();
   state: Person = getEmptyPerson();
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   setState(index: number) {
     this.state = createPerson(index)
@@ -20,7 +21,16 @@ export class ContainerOnPushComponent {
   setStateDelayed(index: number) {
     setTimeout(() => {
       this.state = createPerson(index);
+      // first possible solution
+      // this.cdr.detectChanges();
     }, 500);
   }
 
+  setStateDelayedVM(index: number) {
+    setTimeout(() => {
+      this.state = createPerson(index);
+      // second possible solution
+      this.vm$.next(this.state);
+    }, 500);
+  }
 }

@@ -9,6 +9,7 @@ import { ScanCounterComponent } from './scan-counter/scan-counter.component';
 
 // change this value to view differences in scan counter results
 export const HIERARCHY_CHANGE_DETECTION_STRATEGY: ChangeDetectionStrategy = ChangeDetectionStrategy.OnPush;
+// export const HIERARCHY_CHANGE_DETECTION_STRATEGY: ChangeDetectionStrategy = ChangeDetectionStrategy.Default;
 
 @NgModule({
   declarations: [

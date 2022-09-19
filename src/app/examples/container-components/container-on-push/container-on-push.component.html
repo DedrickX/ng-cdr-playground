@@ -22,3 +22,24 @@
   </div>
 </div>
 
+<!--
+Possible solution by using vm$ pipe
+<hr />
+
+<div class="state" *ngIf="(vm$ | async) as vmState">
+  <div>name2: "{{ vmState.name }}"</div>
+  <div>surname2: "{{ vmState.surname }}"</div>
+  <div>age2: {{ vmState.age }}</div>
+</div>
+
+<div class="state-change">
+  <div>Zmena stavu</div>
+  <div class="horizontal">
+    <div class="label">Cez vm</div>
+    <button (click)="setStateDelayedVM(0)">Person A</button>
+    <button (click)="setStateDelayedVM(1)">Person B</button>
+    <button (click)="setStateDelayedVM(2)">Person C</button>
+  </div>
+</div>
+-->
+

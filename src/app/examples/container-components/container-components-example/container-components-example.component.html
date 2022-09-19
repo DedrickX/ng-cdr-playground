@@ -30,6 +30,11 @@
       Pri komponente s OnPush strategy sú okamžité zmeny hodnôt bez problémov. No oneskorená zmena hodnôt sa správa
       zle...
     </li>
+    <li>
+      Riešenie zlého prekreslenia by sme mohli nájsť niekoľko.<br />
+      1. Explicitné vyvolanie detegcie zmien v rámci asynchrónneho procesu pomocou this.cdr.detectChanges().<br />
+      2. Vyvedenie subscribcie asynchrónneho procesu do templaty, o detegciu sa potom postará async subscribcia v template.
+    </li>
   </ul>
 </div>
 

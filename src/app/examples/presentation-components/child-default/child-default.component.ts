@@ -8,7 +8,11 @@ import { getEmptyPerson, Person } from '../../../models/models';
 })
 export class ChildDefaultComponent {
 
-  @Input()
+  @Input('state') set setState(s: Person) {
+    console.log('-- input default child --');
+    this.state = s;
+  };
+
   state: Person = getEmptyPerson();
 
   constructor() { }

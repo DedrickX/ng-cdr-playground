@@ -8,8 +8,11 @@ import { getEmptyPerson, Person } from '../../../models/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildOnPushComponent {
+  @Input('state') set setState(s: Person) {
+    console.log('-- input push child --');
+    this.state = s;
+  };
 
-  @Input()
   state: Person = getEmptyPerson();
 
   constructor() { }
