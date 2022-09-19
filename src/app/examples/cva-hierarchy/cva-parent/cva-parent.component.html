@@ -1,15 +1,25 @@
 <h3>Parent</h3>
 
-<div class="state">
-  formGroup.value: <pre>{{ this.state.value | json }}</pre>
+<div [formGroup]="state">
+  <div class="state">
+    <app-cva-child formControlName="person"></app-cva-child>
+  </div>
 </div>
 
 <div class="state-change mb">
   <div>Zmena stavu</div>
+
   <div class="horizontal">
     <div>Nastav</div>
     <button (click)="setState(0)">Person A</button>
     <button (click)="setState(1)">Person B</button>
     <button (click)="setState(2)">Person C</button>
+  </div>
+
+  <div class="horizontal">
+    <div>Oneskorene</div>
+    <button (click)="setStateDelayed(0)">Person A</button>
+    <button (click)="setStateDelayed(1)">Person B</button>
+    <button (click)="setStateDelayed(2)">Person C</button>
   </div>
 </div>

@@ -12,14 +12,23 @@ import { CVA_CHANGE_DETECTION_STRATEGY } from '../cva-hierarchy.module';
 export class CvaParentComponent {
 
   state: FormGroup;
+  formBuilder: any;
 
   constructor(
-    fb: FormBuilder
+    private fb: FormBuilder
   ) {
-    this.state = fb.group<Person>(getEmptyPerson())
+    this.state = fb.group({
+      person: this.fb.control<Person | null>(getEmptyPerson())
+    });
   }
 
   setState(index: number) {
-    this.state.setValue(createPerson(index));
+    this.state.controls['person'].setValue(createPerson(index));
+  }
+
+  setStateDelayed(index: number) {
+    setTimeout(() => {
+      this.state.controls['person'].setValue(createPerson(index));
+    }, 500);
   }
 }
