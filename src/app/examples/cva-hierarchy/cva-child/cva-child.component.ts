@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { Person } from 'src/app/models/models';
+import { getEmptyPerson, Person } from 'src/app/models/models';
 import { CVA_CHANGE_DETECTION_STRATEGY } from '../cva-hierarchy.module';
 
 interface PersonFormInterface {
@@ -26,6 +26,7 @@ interface PersonFormInterface {
 export class CvaChildComponent implements ControlValueAccessor, OnInit, OnDestroy {
   form: FormGroup<PersonFormInterface>;
   private onChange: any = () => { };
+  private previousValue: Person = getEmptyPerson();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -41,6 +42,10 @@ export class CvaChildComponent implements ControlValueAccessor, OnInit, OnDestro
   ngOnInit(): void {}
   ngOnDestroy(): void {}
   writeValue(person: Person): void {
+    if (this.previousValue === person) {
+      console.log('this is the same object, it is a mutation');
+    }
+    this.previousValue = person;
     this.form.patchValue(person, { emitEvent: false });
   }
   registerOnChange(fn: any): void { this.onChange = fn; }
