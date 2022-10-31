@@ -1,14 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {
+  ControlValueAccessor,
+  FormControl,
+  FormGroup,
+  NG_VALUE_ACCESSOR,
+  Validators
+} from '@angular/forms';
 
-import { getEmptyPerson, Person } from 'src/app/models/models';
+import { Person } from 'src/app/models/models';
 import { CVA_CHANGE_DETECTION_STRATEGY } from '../cva-hierarchy.module';
-
-interface PersonFormInterface {
-  name: FormControl<string | null>,
-  surname: FormControl<string | null>,
-  age: FormControl<number | null>
-}
 
 @Component({
   selector: 'app-cva-child',
@@ -24,28 +24,22 @@ interface PersonFormInterface {
   changeDetection: CVA_CHANGE_DETECTION_STRATEGY
 })
 export class CvaChildComponent implements ControlValueAccessor, OnInit, OnDestroy {
-  form: FormGroup<PersonFormInterface>;
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    surname: new FormControl('', Validators.required),
+    age: new FormControl(0),
+  })
+
   private onChange: any = () => { };
-  private previousValue: Person = getEmptyPerson();
 
   constructor(
-    private formBuilder: FormBuilder,
   ) {
-    this.form = this.formBuilder.group({
-      name: this.formBuilder.control<string | null>(null),
-      surname: this.formBuilder.control<string | null>(null),
-      age: this.formBuilder.control<number | null>(null),
-    });
     this.form.valueChanges.subscribe((v) => this.onChange(v));
   }
 
   ngOnInit(): void {}
   ngOnDestroy(): void {}
   writeValue(person: Person): void {
-    if (this.previousValue === person) {
-      console.log('this is the same object, it is a mutation');
-    }
-    this.previousValue = person;
     this.form.patchValue(person, { emitEvent: false });
   }
   registerOnChange(fn: any): void { this.onChange = fn; }

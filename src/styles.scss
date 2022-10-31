@@ -54,6 +54,18 @@ button {
   }
 }
 
+.form-control {
+  label {
+    display: block;
+    font-size: small;
+    margin-bottom: 4px;
+  };
+
+  input {
+    margin-bottom: 8px;
+  }
+}
+
 .state {
   padding: 10px;
   margin-bottom: 10px;

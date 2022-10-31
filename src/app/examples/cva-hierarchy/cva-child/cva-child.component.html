@@ -1,5 +1,16 @@
+<h3>CVA Child - Person editor</h3>
+
 <div [formGroup]="form">
-  <input formControlName="name" />
-  <input formControlName="surname" />
-  <input formControlName="age" />
+  <div class="form-control">
+    <label for="name">Name</label>
+    <input type="text" formControlName="name" id="name" />
+  </div>
+  <div class="form-control">
+    <label for="surname">Surname</label>
+    <input type="text" formControlName="surname" id="surname" />
+  </div>
+  <div class="form-control">
+    <label for="age">Age</label>
+    <input type="number" formControlName="age" id="age" />
+  </div>
 </div>

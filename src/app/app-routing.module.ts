@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'container', component: ContainerComponentsExampleComponent },
   { path: 'presentation', component: PresentationComponentExampleComponent },
   { path: 'hierarchy', component: HierarchyComponent },
-  { path: 'cva-hierarchy', component: CvaHierarchyExampleComponent },
+  { path: 'forms', component: CvaHierarchyExampleComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
