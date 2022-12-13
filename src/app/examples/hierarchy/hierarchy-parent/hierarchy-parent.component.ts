@@ -23,6 +23,10 @@ export class HierarchyParentComponent {
   ) {
   }
 
+  mutateAgeDelayed() {
+    setTimeout(() => this.state.age = this.state.age + 1, 500);
+  }
+
   setState(index: number) {
     this.state = createPerson(index)
   }

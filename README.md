@@ -11,3 +11,20 @@ vzhľadom na rýchlosť, plynulosť animácií, príde potreba vedieť viac. Vte
 pravidlá a rôzne možnosti fungovania: Change Detection Strategy Default vs OnPush, záhadné NgZones...
 
 V tomto projekte nájdete zbierku príkladov, ktoré pomáhajú spoznať niektoré z týchto princípov.
+
+
+1.) priklad
+	- riesenie push komponentu cez explicit detect change
+	- riesenie push komponentu cez vm$
+
+2.) priklad
+	OnPush sa zvonku z parenta prekresli len v pripade ze sa jeho input zmeni
+	ukazat input konzol logy a tym dokazat ze input nenastal ani v jednom ani v druhom pripade
+
+3.) dvojita detekcia je kontrolny mechanizmus pre zistenie ci nedoslo k dodatocnemu zmenu view
+	ExpressionChangedAfterItHasBeenCheckedError
+
+4.) detekcia pri elemente na ktorom nie je ziadny angular listener
+	detekcia pri elemente na ktorom je prazdny listener
+
+5.) zastavenie prekreslenia na komponente s default strategiou ak jeho parent je s push strategiou

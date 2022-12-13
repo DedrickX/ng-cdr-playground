@@ -12,7 +12,9 @@ export class ContainerOnPushComponent {
   vm$ = new Subject<Person>();
   state: Person = getEmptyPerson();
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(
+    private cdr: ChangeDetectorRef
+  ) { }
 
   setState(index: number) {
     this.state = createPerson(index)
@@ -22,7 +24,7 @@ export class ContainerOnPushComponent {
     setTimeout(() => {
       this.state = createPerson(index);
       // first possible solution
-      // this.cdr.detectChanges();
+      this.cdr.detectChanges();
     }, 500);
   }
 
