@@ -1,0 +1,27 @@
+<ng-container [formGroup]="state">
+  <h3>Parent</h3>
+  <div>
+    <div class="state">
+      FormModel
+      <pre> {{ state.value | json }}</pre>
+    </div>
+  </div>
+
+  <div class="state-change mb">
+    <div>Zmena stavu</div>
+
+    <div class="horizontal">
+      <div>Nastav</div>
+      <button (click)="setState(0)">Person A</button>
+      <button (click)="setState(1)">Person B</button>
+      <button (click)="setState(2)">Person C</button>
+    </div>
+  </div>
+
+  <app-cva-child formControlName="person"></app-cva-child>
+  <div class="form-control">
+    <label for="someValue">Some other value</label>
+    <input type="number" formControlName="someOtherValue" id="someValue">
+  </div>
+
+</ng-container>
